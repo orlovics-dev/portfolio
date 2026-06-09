@@ -1,0 +1,31 @@
+# Vídeos — muito pesados para GitHub (use versão local para assistir)
+*.mp4
+*.mov
+*.avi
+*.mkv
+
+# Arquivos RAW de câmera
+*.ARW
+*.arw
+*.DNG
+*.dng
+*.xmp
+
+# PDFs grandes
+fotos/REVISTA*.pdf
+fotos/*.pdf
+
+# Fotos brutas gigantes (mantidas apenas na pasta docs/ comprimidas)
+fotos/eu.png
+fotos/formatura .png
+fotos/_DSC*.jpg
+fotos/DJI_0160.DNG
+
+# macOS
+.DS_Store
+._*
+__MACOSX/
+
+# Sistema
+Thumbs.db
+desktop.ini
