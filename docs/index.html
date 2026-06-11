@@ -572,7 +572,7 @@
   document.querySelectorAll('.reveal').forEach(el=>obs.observe(el));
   const skillObs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.querySelectorAll('.skill-fill').forEach(f=>f.style.width=f.dataset.w+'%');skillObs.unobserve(x.target)}})},{threshold:.3});
   document.querySelectorAll('.skills-grid').forEach(el=>skillObs.observe(el));
-  function toggleSection(btn,id){const c=document.getElementById(id);const o=c.classList.contains('open');c.classList.toggle('open',!o);btn.classList.toggle('open',!o)}
+  function toggleSection(btn,id){const c=document.getElementById(id);const o=c.classList.contains('open');c.classList.toggle('open',!o);btn.classList.toggle('open',!o);if(!o){c.querySelectorAll('img[loading="lazy"]').forEach(img=>{if(!img.src||img.src===window.location.href){const ds=img.dataset.src;if(ds)img.src=ds;}else{const s=img.src;img.src='';img.src=s;}img.loading='eager';})}}
   const lb=document.getElementById('lightbox'),lbImg=document.getElementById('lightbox-img');
   function openImgLB(src){lbImg.src=src;lb.classList.add('open');document.body.style.overflow='hidden'}
   const photos=Array.from(document.querySelectorAll('.photo-item'));let ci=0;
